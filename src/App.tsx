@@ -1,7 +1,7 @@
-import { useState } from 'react'
+import { useState } from 'react';
 
 export default function App(): JSX.Element {
-  const [count, setCount] = useState<number>(0)
+  const [count, setCount] = useState<number>(0);
 
   return (
     <div className="App">
@@ -15,8 +15,13 @@ export default function App(): JSX.Element {
           <form>
             <label>
               Week:
-              <input type="text" inputMode="numeric" pattern="[0-9]*" defaultValue={1}/>
-              <input type="submit"/>
+              <input
+                type="text"
+                inputMode="numeric"
+                pattern="[0-9]*"
+                defaultValue={1}
+              />
+              <input type="submit" />
             </label>
           </form>
           <label>
@@ -30,5 +35,5 @@ export default function App(): JSX.Element {
         </p>
       </div>
     </div>
-  )
+  );
 }
