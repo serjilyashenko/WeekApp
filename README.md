@@ -7,3 +7,5 @@ Simple habit tracker for myself.
 - Vite.js
 - React
 - Typescript
+- Jest
+- ts-jest
