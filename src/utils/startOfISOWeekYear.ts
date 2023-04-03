@@ -1,6 +1,6 @@
 import { startOfIsoWeek } from './startOfIsoWeek';
 
-// First isoWeek has 4 January in it
+// First isoWeek includes 4 January in it
 // https://en.wikipedia.org/wiki/ISO_week_date
 
 export function startOfISOWeekYear(dirtyDate: Date): Date {
