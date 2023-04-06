@@ -21,3 +21,9 @@ it('edge days of week', () => {
   // end of the first day
   expect(getIsoWeek(new Date('2023-04-09T23:59:59.999'))).toBe(14);
 });
+
+it('does not mutate the original date', () => {
+  const date = new Date('2023-03-29T14:00:00Z');
+  getIsoWeek(date);
+  expect(date.toISOString()).toBe('2023-03-29T14:00:00.000Z');
+});

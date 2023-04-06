@@ -1,16 +1,13 @@
-import { useState } from 'react';
+import { DateToWeek } from './date-to-week/DateToWeek';
 
 export default function App(): JSX.Element {
-  const [count, setCount] = useState<number>(0);
-
   return (
-    <div className="App">
+    <div>
       <h1>🕰️ Week App</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-
+      <div>
+        <DateToWeek />
+        <br />
+        <br />
         <div>
           <form>
             <label>
@@ -29,10 +26,6 @@ export default function App(): JSX.Element {
             <output>lol</output>
           </label>
         </div>
-
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
       </div>
     </div>
   );
