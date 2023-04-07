@@ -8,24 +8,24 @@ export default function App(): JSX.Element {
         <DateToWeek />
         <br />
         <br />
-        <div>
-          <form>
-            <label>
-              Week:
-              <input
-                type="text"
-                inputMode="numeric"
-                pattern="[0-9]*"
-                defaultValue={1}
-              />
-              <input type="submit" />
-            </label>
-          </form>
-          <label>
-            Dates:
-            <output>lol</output>
-          </label>
-        </div>
+        {/*<div>*/}
+        {/*  <form>*/}
+        {/*    <label>*/}
+        {/*      Week:*/}
+        {/*      <input*/}
+        {/*        type="text"*/}
+        {/*        inputMode="numeric"*/}
+        {/*        pattern="[0-9]*"*/}
+        {/*        defaultValue={1}*/}
+        {/*      />*/}
+        {/*      <input type="submit" />*/}
+        {/*    </label>*/}
+        {/*  </form>*/}
+        {/*  <label>*/}
+        {/*    Dates:*/}
+        {/*    <output>lol</output>*/}
+        {/*  </label>*/}
+        {/*</div>*/}
       </div>
     </div>
   );

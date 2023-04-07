@@ -1,0 +1,32 @@
+.calendar_container {
+  border: 1px solid white;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.calendar_header {
+  background-color: red;
+  color: white;
+  height: 40px;
+  display: grid;
+  align-items: center;
+}
+
+.week {
+  padding: 10px;
+}
+
+.week_label {
+
+}
+
+.week_output {
+  display: block;
+  font-size: 50px;
+}
+
+@media (prefers-color-scheme: light) {
+  .calendar_container {
+    border: 1px solid black;
+  }
+}
