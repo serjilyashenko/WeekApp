@@ -24,8 +24,12 @@ export function DateToWeek(): JSX.Element {
     <div className={style.calendar_container}>
       <div className={style.calendar_header}>
         <time dateTime={getIsoStringDate(today)}>{prettyDate}</time>
-        <button className={style.refresh_button} onClick={onRefresh}>
-          <RefreshIcon />
+        <button
+          aria-label="refresh date"
+          className={style.refresh_button}
+          onClick={onRefresh}
+        >
+          <RefreshIcon aria-hidden />
         </button>
       </div>
       <div className={style.week}>
