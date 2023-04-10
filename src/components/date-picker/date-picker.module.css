@@ -1,0 +1,20 @@
+.datepicker {
+  overflow: hidden;
+  color: white;
+  position: relative;
+}
+
+.datepicker_control {
+  position: absolute;
+  width: 16px;
+  height: 20px;
+  left: 4px;
+  background-color: transparent;
+  opacity: 0;
+  transform: scale(3);
+  cursor: pointer;
+}
+
+.datepicker_control::-webkit-calendar-picker-indicator {
+  cursor: pointer !important;
+}

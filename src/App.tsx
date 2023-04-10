@@ -1,4 +1,4 @@
-import { DateToWeek } from './date-to-week/DateToWeek';
+import { DateToWeek } from './components/date-to-week/DateToWeek';
 
 export default function App(): JSX.Element {
   return (

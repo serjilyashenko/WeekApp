@@ -18,6 +18,15 @@ it.each([
   expect(fifthJanuary.toLocaleDateString('en-SE')).toBe(result);
 });
 
+it.each([
+  ['2023-01-01T00:00:00', '2022-01-03'],
+  ['2022-12-31T00:00:00', '2022-01-03'],
+  ['2024-12-31T00:00:00', '2024-12-30'],
+])('edge cases: %o => %o', (input, output) => {
+  const date = new Date(input);
+  expect(startOfISOWeekYear(date).toLocaleDateString('en-SE')).toBe(output);
+});
+
 it('does not mutate the original date', () => {
   const date = new Date('2023-03-29T14:00:00Z');
   startOfISOWeekYear(date);

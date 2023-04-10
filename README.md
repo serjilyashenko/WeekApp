@@ -11,4 +11,3 @@ Simple habit tracker for myself.
 - ts-jest
 
 **Note:** There is no RTL. First I want to test my date functions. RTL may be added later.
-

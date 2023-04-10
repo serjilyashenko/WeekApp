@@ -72,9 +72,27 @@ button {
 button:hover {
   border-color: #646cff;
 }
-button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: 4px auto blue;
+}
+
+.icon_btn {
+  background-color: transparent;
+  border: none;
+  /*height: 32px;*/
+  /*width: 32px;*/
+  padding: 8px;
+  /*display: grid;*/
+  /*align-items: center;*/
+  /*justify-items: center;*/
+  line-height: 0;
+  transition: 0.2s transform ease-in-out;
+}
+.icon_btn:hover {
+  transform: scale(1.2);
+}
+.icon_btn:active {
+  transform: scale(1.15);
 }
 
 #root {
