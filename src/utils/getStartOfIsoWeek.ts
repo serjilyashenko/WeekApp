@@ -8,7 +8,7 @@ const firstDayOfIsoWeek = 1; // Monday is the first day of isoWeek; https://en.w
 // 6 sat diff = 5
 // 0 sun diff = 6
 
-export function startOfIsoWeek(dirtyDate: Date): Date {
+export function getStartOfIsoWeek(dirtyDate: Date): Date {
   const date: Date = new Date(dirtyDate);
   const day: number = date.getDay();
 

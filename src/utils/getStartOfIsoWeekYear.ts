@@ -1,9 +1,9 @@
-import { startOfIsoWeek } from './startOfIsoWeek';
+import { getStartOfIsoWeek } from './getStartOfIsoWeek';
 
 // First isoWeek includes 4 January in it
 // https://en.wikipedia.org/wiki/ISO_week_date
 
-export function startOfISOWeekYear(dirtyDate: Date): Date {
+export function getStartOfIsoWeekYear(dirtyDate: Date): Date {
   const date: Date = new Date(dirtyDate);
 
   const nextFifthJanuary: Date = new Date(dirtyDate);
@@ -11,7 +11,7 @@ export function startOfISOWeekYear(dirtyDate: Date): Date {
   nextFifthJanuary.setHours(0, 0, 0, 0);
   nextFifthJanuary.setDate(4);
   nextFifthJanuary.setMonth(0);
-  const nextYear = startOfIsoWeek(nextFifthJanuary);
+  const nextYear = getStartOfIsoWeek(nextFifthJanuary);
 
   if (date.getTime() > nextYear.getTime()) {
     return nextYear;
@@ -21,7 +21,7 @@ export function startOfISOWeekYear(dirtyDate: Date): Date {
   fifthJanuary.setHours(0, 0, 0, 0);
   fifthJanuary.setDate(4);
   fifthJanuary.setMonth(0);
-  const thisYear = startOfIsoWeek(fifthJanuary);
+  const thisYear = getStartOfIsoWeek(fifthJanuary);
 
   if (date.getTime() > fifthJanuary.getTime()) {
     return thisYear;
@@ -32,5 +32,5 @@ export function startOfISOWeekYear(dirtyDate: Date): Date {
   previousFifthJanuary.setHours(0, 0, 0, 0);
   previousFifthJanuary.setDate(4);
   previousFifthJanuary.setMonth(0);
-  return startOfIsoWeek(previousFifthJanuary);
+  return getStartOfIsoWeek(previousFifthJanuary);
 }
