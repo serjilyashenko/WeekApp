@@ -7,6 +7,9 @@ export function getIsoWeekByWeekNumber(year: number, weekNumber: number): Date {
   const startOfIsoWeekYear: Date = getStartOfIsoWeekYear(date);
 
   const diff: number = MILLISECONDS_IN_WEEK * (weekNumber - 1);
+  const resultDate: Date = new Date(startOfIsoWeekYear.getTime() + diff);
 
-  return new Date(startOfIsoWeekYear.getTime() + diff);
+  resultDate.setHours(0, 0, 0, 0); // fixes daylight saving time
+
+  return resultDate;
 }
