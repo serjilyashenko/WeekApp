@@ -3,7 +3,7 @@ import { getStartOfIsoWeek } from './getStartOfIsoWeek';
 // First isoWeek includes 4 January in it
 // https://en.wikipedia.org/wiki/ISO_week_date
 
-export function getStartOfIsoWeekYear(dirtyDate: Date): Date {
+export function getStartOfFirstIsoWeek(dirtyDate: Date): Date {
   const date: Date = new Date(dirtyDate);
 
   const nextFifthJanuary: Date = new Date(dirtyDate);
