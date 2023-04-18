@@ -1,9 +1,9 @@
 import { MILLISECONDS_IN_WEEK } from '../const';
 import { getStartOfIsoWeek } from './getStartOfIsoWeek';
-import { getStartOfFirstIsoWeek } from './getStartOfFirstIsoWeek';
+import { getFirstIsoWeek } from './getFirstIsoWeek';
 
 export function getIsoWeek(dirtyDate: Date): number {
-  const firstWeekStart = getStartOfFirstIsoWeek(dirtyDate);
+  const firstWeekStart = getFirstIsoWeek(dirtyDate);
   const currentWeekStart = getStartOfIsoWeek(dirtyDate);
 
   const diff = currentWeekStart.getTime() - firstWeekStart.getTime();

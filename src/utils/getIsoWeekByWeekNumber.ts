@@ -1,4 +1,4 @@
-import { getStartOfFirstIsoWeek } from './getStartOfFirstIsoWeek';
+import { getFirstIsoWeek } from './getFirstIsoWeek';
 import { MILLISECONDS_IN_WEEK } from '../const';
 import { isValidDate } from './isDateValid';
 import { InvalidDateError } from './errors';
@@ -11,7 +11,7 @@ export function getIsoWeekByWeekNumber(year: number, weekNumber: number): Date {
     throw new InvalidDateError();
   }
 
-  const startOfIsoWeekYear: Date = getStartOfFirstIsoWeek(date);
+  const startOfIsoWeekYear: Date = getFirstIsoWeek(date);
 
   const diff: number = MILLISECONDS_IN_WEEK * (weekNumber - 1);
   const resultDate: Date = new Date(startOfIsoWeekYear.getTime() + diff);

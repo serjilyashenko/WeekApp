@@ -1,4 +1,4 @@
-import { getStartOfFirstIsoWeek } from './getStartOfFirstIsoWeek';
+import { getFirstIsoWeek } from './getFirstIsoWeek';
 
 it.each([
   ['2015', '2014-12-29'],
@@ -13,9 +13,7 @@ it.each([
   ['2024', '2024-01-01'],
   ['2025', '2024-12-30'],
 ])('start of %o year is %o', (year, result) => {
-  const fifthJanuary = getStartOfFirstIsoWeek(
-    new Date(`${year}-03-12T14:00:00Z`)
-  );
+  const fifthJanuary = getFirstIsoWeek(new Date(`${year}-03-12T14:00:00Z`));
 
   expect(fifthJanuary.toLocaleDateString('en-SE')).toBe(result);
 });
@@ -26,11 +24,11 @@ it.each([
   ['2024-12-31T00:00:00', '2024-12-30'],
 ])('edge cases: %o => %o', (input, output) => {
   const date = new Date(input);
-  expect(getStartOfFirstIsoWeek(date).toLocaleDateString('en-SE')).toBe(output);
+  expect(getFirstIsoWeek(date).toLocaleDateString('en-SE')).toBe(output);
 });
 
 it('does not mutate the original date', () => {
   const date = new Date('2023-03-29T14:00:00Z');
-  getStartOfFirstIsoWeek(date);
+  getFirstIsoWeek(date);
   expect(date.toISOString()).toBe('2023-03-29T14:00:00.000Z');
 });
