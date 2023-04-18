@@ -2,7 +2,7 @@ import { useId, useState } from 'react';
 import { DatePicker } from '../date-picker/DatePicker';
 import { getIsoStringDate } from '../../utils/getIsoStringDate';
 import { ReactComponent as RefreshIcon } from '../../icons/refresh.svg';
-import { getIsoWeek } from '../../utils/getIsoWeek';
+import { getIsoWeekNumber } from '../../utils/getIsoWeekNumber';
 
 import style from './date-to-week.module.css';
 
@@ -14,7 +14,7 @@ export function DateToWeek(): JSX.Element {
     day: '2-digit',
     month: 'short',
   });
-  const week = getIsoWeek(today);
+  const week = getIsoWeekNumber(today);
 
   function onRefresh() {
     setToday(new Date());

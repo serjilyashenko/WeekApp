@@ -1,12 +1,22 @@
-import { MILLISECONDS_IN_WEEK } from '../const';
-import { getStartOfIsoWeek } from './getStartOfIsoWeek';
-import { getFirstIsoWeek } from './getFirstIsoWeek';
+const firstDayOfIsoWeek = 1; // Monday is the first day of isoWeek; https://en.wikipedia.org/wiki/ISO_week_date
 
-export function getIsoWeek(dirtyDate: Date): number {
-  const firstWeekStart = getFirstIsoWeek(dirtyDate);
-  const currentWeekStart = getStartOfIsoWeek(dirtyDate);
+// 1 mon diff = 0
+// 2 tue diff = 1
+// 3 wed diff = 2
+// 4 thu diff = 3
+// 5 fri diff = 4
+// 6 sat diff = 5
+// 0 sun diff = 6
 
-  const diff = currentWeekStart.getTime() - firstWeekStart.getTime();
+export function getIsoWeek(dirtyDate: Date): Date {
+  const date: Date = new Date(dirtyDate);
+  const day: number = date.getDay();
 
-  return Math.round(diff / MILLISECONDS_IN_WEEK) + 1;
+  date.setHours(0, 0, 0, 0);
+
+  const diff: number = day === 0 ? 6 : day - firstDayOfIsoWeek;
+
+  date.setDate(date.getDate() - diff);
+
+  return date;
 }
