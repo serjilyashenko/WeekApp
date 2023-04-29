@@ -1,4 +1,5 @@
 import { DateToWeek } from './components/date-to-week/DateToWeek';
+import { WeekToDate } from './components/week-to-date/WeekToDate';
 
 export default function App(): JSX.Element {
   return (
@@ -8,24 +9,7 @@ export default function App(): JSX.Element {
         <DateToWeek />
         <br />
         <br />
-        {/*<div>*/}
-        {/*  <form>*/}
-        {/*    <label>*/}
-        {/*      Week:*/}
-        {/*      <input*/}
-        {/*        type="text"*/}
-        {/*        inputMode="numeric"*/}
-        {/*        pattern="[0-9]*"*/}
-        {/*        defaultValue={1}*/}
-        {/*      />*/}
-        {/*      <input type="submit" />*/}
-        {/*    </label>*/}
-        {/*  </form>*/}
-        {/*  <label>*/}
-        {/*    Dates:*/}
-        {/*    <output>lol</output>*/}
-        {/*  </label>*/}
-        {/*</div>*/}
+        <WeekToDate />
       </div>
     </div>
   );

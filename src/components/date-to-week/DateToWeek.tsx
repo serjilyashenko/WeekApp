@@ -1,5 +1,5 @@
 import { useId, useState } from 'react';
-import { DatePicker } from '../date-picker/DatePicker';
+import { DatePicker } from '../../reusable-components/date-picker/DatePicker';
 import { getIsoStringDate } from '../../utils/getIsoStringDate';
 import { ReactComponent as RefreshIcon } from '../../icons/refresh.svg';
 import { getIsoWeekNumber } from '../../utils/getIsoWeekNumber';
@@ -8,20 +8,20 @@ import style from './date-to-week.module.css';
 
 export function DateToWeek(): JSX.Element {
   const weekOutputId = useId();
-  const [today, setToday] = useState(new Date());
+  const [inputDate, setInputDate] = useState(new Date());
 
-  const prettyDate = today.toLocaleString('default', {
+  const prettyDate = inputDate.toLocaleString('default', {
     day: '2-digit',
     month: 'short',
   });
-  const week = getIsoWeekNumber(today);
+  const week = getIsoWeekNumber(inputDate);
 
   function onRefresh() {
-    setToday(new Date());
+    setInputDate(new Date());
   }
 
   function onChange(date: Date) {
-    setToday(date);
+    setInputDate(date);
   }
 
   return (
@@ -36,7 +36,7 @@ export function DateToWeek(): JSX.Element {
             <RefreshIcon aria-hidden />
           </div>
         </button>
-        <time dateTime={getIsoStringDate(today)}>{prettyDate}</time>
+        <time dateTime={getIsoStringDate(inputDate)}>{prettyDate}</time>
         <DatePicker onChange={onChange} />
       </div>
       <div className={style.week}>
