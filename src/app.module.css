@@ -1,0 +1,15 @@
+.header {
+  text-align: center;
+}
+
+.main_content {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.main_content__item {
+  flex: 0 1 300px;
+}

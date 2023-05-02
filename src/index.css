@@ -47,8 +47,8 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
+  display: grid;
+  align-items: center;
   min-height: 100vh;
 }
 
@@ -78,12 +78,7 @@ button:focus-visible {
 .icon_btn {
   background-color: transparent;
   border: none;
-  /*height: 32px;*/
-  /*width: 32px;*/
   padding: 8px;
-  /*display: grid;*/
-  /*align-items: center;*/
-  /*justify-items: center;*/
   line-height: 0;
   transition: 0.2s transform ease-in-out;
 }
@@ -96,7 +91,5 @@ button:focus-visible {
 
 #root {
   max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  padding: 32px;
 }

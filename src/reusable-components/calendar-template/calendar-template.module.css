@@ -1,0 +1,27 @@
+.calendar_container {
+  background-color: #2d2c2c;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 20px 30px;
+}
+
+.calendar_header {
+  background-color: #c70000;
+  color: white;
+  min-height: 40px;
+}
+
+.calendar_content {
+  text-align: center;
+  padding: 40px 5px;
+}
+
+@media (prefers-color-scheme: light) {
+  .calendar_container {
+    background-color: var(--background-color);
+  }
+}
+
+.calendar_container__secondary .calendar_header {
+  background-color: blue;
+}
