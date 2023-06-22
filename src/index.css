@@ -90,6 +90,5 @@ button:focus-visible {
 }
 
 #root {
-  max-width: 1280px;
   padding: 32px;
 }

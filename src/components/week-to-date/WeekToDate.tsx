@@ -2,6 +2,8 @@ import { FormEvent, useState } from 'react';
 import { CalendarTemplate } from '../../reusable-components/calendar-template/CalendarTemplate';
 import { getLastIsoWeek } from '../../utils/getLastIsoWeek';
 import { getIsoWeekNumber } from '../../utils/getIsoWeekNumber';
+import { getIsoWeekByWeekNumber } from '../../utils/getIsoWeekByWeekNumber';
+import { getEndOfIsoWeek } from '../../utils/getEndOfIsoWeek';
 import style from './week-to-date.module.css';
 
 export function WeekToDate(): JSX.Element {
@@ -14,19 +16,34 @@ export function WeekToDate(): JSX.Element {
   const inputDate: Date = new Date(inputYear, 0, 1);
   const maxWeekNumber = getIsoWeekNumber(getLastIsoWeek(inputDate));
 
+  const startDate: Date = getIsoWeekByWeekNumber(inputYear, inputWeekNumber); // TODO: handle error
+  const endDate: Date = getEndOfIsoWeek(startDate); // TODO: handle error
+
+  const resultString: string = new Intl.DateTimeFormat('default', {
+    day: '2-digit',
+    month: 'short',
+  }).formatRange(startDate, endDate);
+
   function onRefresh() {
     setInputWeekNumer(getIsoWeekNumber(new Date()));
   }
 
   function onSubmit(e: FormEvent<HTMLFormElement>): void {
     e.preventDefault();
+
+    // @ts-ignore // TODO: get rid of it
+    setInputWeekNumer(e.target['week-number'].value);
+  }
+
+  function onFormChange() {
+    console.log('>>');
   }
 
   return (
     <CalendarTemplate
       secondary
       header={
-        <form onSubmit={onSubmit}>
+        <form onSubmit={onSubmit} onChange={onFormChange}>
           <div>
             <label>
               Year:
@@ -56,10 +73,9 @@ export function WeekToDate(): JSX.Element {
         </form>
       }
     >
-      <label className={style.wip}>
-        Dates:
-        <output>lol</output>
-      </label>
+      <output aria-label="Week days" className={style.dates_output}>
+        {resultString}
+      </output>
     </CalendarTemplate>
   );
 }
