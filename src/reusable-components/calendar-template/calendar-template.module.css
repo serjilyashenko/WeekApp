@@ -14,7 +14,11 @@
 
 .calendar_content {
   text-align: center;
-  padding: 40px 5px;
+  padding: 10px 5px;
+  display: grid;
+  align-items: center;
+
+  min-height: var(--calendar-content);
 }
 
 @media (prefers-color-scheme: light) {

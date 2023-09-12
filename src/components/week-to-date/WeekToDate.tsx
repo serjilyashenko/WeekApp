@@ -1,9 +1,12 @@
-import { FormEvent, useState } from 'react';
+import React, { ChangeEvent, FormEvent, useState } from 'react';
 import { CalendarTemplate } from '../../reusable-components/calendar-template/CalendarTemplate';
 import { getLastIsoWeek } from '../../utils/getLastIsoWeek';
 import { getIsoWeekNumber } from '../../utils/getIsoWeekNumber';
 import { getIsoWeekByWeekNumber } from '../../utils/getIsoWeekByWeekNumber';
 import { getEndOfIsoWeek } from '../../utils/getEndOfIsoWeek';
+import { ReactComponent as EditIcon } from '../../icons/edit.svg';
+import { ReactComponent as RefreshIcon } from '../../icons/refresh.svg';
+
 import style from './week-to-date.module.css';
 
 export function WeekToDate(): JSX.Element {
@@ -35,42 +38,65 @@ export function WeekToDate(): JSX.Element {
     setInputWeekNumer(e.target['week-number'].value);
   }
 
-  function onFormChange() {
-    console.log('>>');
+  function onFormChange(e: ChangeEvent<HTMLFormElement>) {
+    console.log('>>', e);
+
+    // setInputWeekNumer(e.target.form['week-number'].value);
   }
 
   return (
     <CalendarTemplate
       secondary
       header={
-        <form onSubmit={onSubmit} onChange={onFormChange}>
-          <div>
-            <label>
-              Year:
-              <input
-                name="year"
-                type="text"
-                inputMode="numeric"
-                pattern="[1-9][0-9]{3}"
-                title="Year YYYY"
-                defaultValue={inputYear}
-              />
-            </label>
-          </div>
-          <div>
-            <label>
-              WeekNumber (1 – {maxWeekNumber}):
-              <input
-                name="week-number"
-                type="text"
-                inputMode="numeric"
-                pattern="[0-9]*"
-                defaultValue={inputWeekNumber}
-              />
-            </label>
-          </div>
-          <input type="submit" />
-        </form>
+        <div className={style.controls_container}>
+          <button
+            aria-label="refresh date"
+            className="icon_btn"
+            onClick={onRefresh}
+          >
+            <div className="circle_attention">
+              <RefreshIcon aria-hidden />
+            </div>
+          </button>
+          <time>
+            {inputYear} w{inputWeekNumber}
+          </time>
+          <button className="icon_btn">
+            <EditIcon aria-hidden />
+          </button>
+          <form
+            onSubmit={onSubmit}
+            onChange={onFormChange}
+            style={{ display: 'none' }}
+          >
+            <div>
+              <label>
+                Year:
+                <input
+                  name="year"
+                  type="text"
+                  inputMode="numeric"
+                  pattern="[1-9][0-9]{3}"
+                  title="Year YYYY"
+                  defaultValue={inputYear}
+                />
+              </label>
+            </div>
+            <div>
+              <label>
+                WeekNumber (1 – {maxWeekNumber}):
+                <input
+                  name="week-number"
+                  type="text"
+                  inputMode="numeric"
+                  pattern="[0-9]*"
+                  defaultValue={inputWeekNumber}
+                />
+              </label>
+            </div>
+            <input type="submit" />
+          </form>
+        </div>
       }
     >
       <output aria-label="Week days" className={style.dates_output}>

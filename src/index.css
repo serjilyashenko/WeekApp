@@ -20,9 +20,6 @@
   -webkit-text-size-adjust: 100%;
 }
 
-:root {
-}
-
 @media (prefers-color-scheme: light) {
   :root {
     --background-color: #ffffff;
@@ -91,4 +88,22 @@ button:focus-visible {
 
 #root {
   padding: 32px;
+}
+
+.circle_attention {
+  animation-name: circle-attention;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes circle-attention {
+  0% {
+    transform: rotate(0deg);
+  }
+  5% {
+    transform: rotate(+30deg);
+  }
+  10% {
+    transform: rotate(0deg);
+  }
 }

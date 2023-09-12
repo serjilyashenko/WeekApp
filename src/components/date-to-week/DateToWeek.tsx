@@ -1,11 +1,11 @@
 import { useId, useState } from 'react';
 import { DatePicker } from '../../reusable-components/date-picker/DatePicker';
+import { CalendarTemplate } from '../../reusable-components/calendar-template/CalendarTemplate';
 import { getIsoStringDate } from '../../utils/getIsoStringDate';
 import { ReactComponent as RefreshIcon } from '../../icons/refresh.svg';
 import { getIsoWeekNumber } from '../../utils/getIsoWeekNumber';
 
 import style from './date-to-week.module.css';
-import { CalendarTemplate } from '../../reusable-components/calendar-template/CalendarTemplate';
 
 export function DateToWeek(): JSX.Element {
   const weekOutputId = useId();
@@ -31,10 +31,10 @@ export function DateToWeek(): JSX.Element {
         <div className={style.controls_container}>
           <button
             aria-label="refresh date"
-            className={`icon_btn ${style.refresh_button}`}
+            className={'icon_btn'}
             onClick={onRefresh}
           >
-            <div className={style.circle_attention}>
+            <div className="circle_attention">
               <RefreshIcon aria-hidden />
             </div>
           </button>

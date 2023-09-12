@@ -8,6 +8,8 @@
   justify-content: center;
   gap: 32px;
   flex-wrap: wrap;
+
+  --calendar-content: 200px;
 }
 
 .main_content__item {

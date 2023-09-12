@@ -1,3 +1,15 @@
+.controls_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+  color: white;
+}
+
+.controls_container button {
+  color: white;
+}
+
 .dates_output {
   font-size: 46px;
   line-height: 62px;

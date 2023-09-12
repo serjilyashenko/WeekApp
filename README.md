@@ -16,3 +16,7 @@ offer a wide range of useful features. By using them, you can avoid common error
 working with dates.
 
 **Note:** There is no RTL. First I want to test my date functions. RTL may be added later.
+
+**Notes:**
+
+- I used css custom properties at some point to share calendar content min height (fine --calendar-content)

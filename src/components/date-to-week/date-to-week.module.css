@@ -5,7 +5,7 @@
   font-size: 20px;
 }
 
-.refresh_button {
+.controls_container button {
   color: white;
 }
 
@@ -19,22 +19,4 @@
   display: block;
   font-size: 90px;
   line-height: 95px;
-}
-
-.circle_attention {
-  animation-name: circle-attention;
-  animation-duration: 7s;
-  animation-iteration-count: infinite;
-}
-
-@keyframes circle-attention {
-  0% {
-    transform: rotate(0deg);
-  }
-  5% {
-    transform: rotate(+30deg);
-  }
-  10% {
-    transform: rotate(0deg);
-  }
 }
