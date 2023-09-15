@@ -44,12 +44,14 @@ export function DateToWeek(): JSX.Element {
       }
     >
       <div className={style.week}>
-        <label htmlFor={weekOutputId} className={style.week_label}>
-          week
-        </label>
-        <output id={weekOutputId} className={style.week_output}>
-          {week}
-        </output>
+        <div>
+          <label htmlFor={weekOutputId} className={style.week_label}>
+            week
+          </label>
+          <output id={weekOutputId} className={style.week_output}>
+            {week}
+          </output>
+        </div>
       </div>
     </CalendarTemplate>
   );

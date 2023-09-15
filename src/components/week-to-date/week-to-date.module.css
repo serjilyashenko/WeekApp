@@ -10,7 +10,40 @@
   color: white;
 }
 
+.output_container {
+  position: relative;
+  height: 100%;
+
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
 .dates_output {
   font-size: 46px;
   line-height: 62px;
+  padding: 10px 5px;
+}
+
+.week_form {
+  background-color: #646cff;
+  position: absolute;
+  inset: 0;
+  height: 0;
+  transition: height 0.3s ease-in-out;
+  transition-delay: 0.15s; /* close delay */
+}
+.week_form__open {
+  transition-delay: 0s; /* open delay */
+  height: 100%;
+}
+
+.week_form_content {
+  opacity: 0;
+  transition: opacity 450ms ease-in-out;
+  transition-delay: 0s; /* hide delay */
+}
+.week_form__open .week_form_content {
+  transition-delay: 150ms; /* show delay */
+  opacity: 1;
 }

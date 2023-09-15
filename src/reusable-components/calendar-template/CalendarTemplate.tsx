@@ -19,7 +19,9 @@ export function CalendarTemplate(props: PropsType): JSX.Element {
   return (
     <div className={containerClassName}>
       <div className={style.calendar_header}>{header}</div>
-      <div className={style.calendar_content}>{children}</div>
+      <div className={style.calendar_content__wrapper}>
+        <div className={style.calendar_content}>{children}</div>
+      </div>
     </div>
   );
 }

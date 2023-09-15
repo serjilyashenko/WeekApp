@@ -10,6 +10,12 @@
 }
 
 .week {
+  box-sizing: border-box;
+  padding: 10px 5px;
+  height: 100%;
+  text-align: center;
+  display: grid;
+  align-items: center;
 }
 
 .week_label {

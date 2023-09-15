@@ -12,13 +12,14 @@
   padding: 8px 16px;
 }
 
-.calendar_content {
-  text-align: center;
-  padding: 10px 5px;
+.calendar_content__wrapper {
+  /* grid and min-height together works correctly for the .calendar_content. Otherwise, .calendar_contend doesn't expand to 100% */
   display: grid;
-  align-items: center;
-
   min-height: var(--calendar-content);
+}
+
+.calendar_content {
+  height: 100%;
 }
 
 @media (prefers-color-scheme: light) {
