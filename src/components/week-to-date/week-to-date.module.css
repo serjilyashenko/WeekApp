@@ -54,7 +54,8 @@
 
 .week_form_content {
   opacity: 0;
-  padding: 20px;
+  padding: 0 24px 20px;
+  margin-top: -16px;
   transition: opacity 450ms ease-in-out;
   transition-delay: 0s; /* hide delay */
 }

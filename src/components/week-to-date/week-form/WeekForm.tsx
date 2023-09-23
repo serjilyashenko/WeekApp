@@ -2,6 +2,8 @@ import React, { FormEvent } from 'react';
 import { getIsoWeekNumber } from '../../../utils/getIsoWeekNumber';
 import { getLastIsoWeek } from '../../../utils/getLastIsoWeek';
 
+import style from './week-form.module.css';
+
 type PropsType = {
   initialYear: number;
   initialWeek: number;
@@ -32,6 +34,7 @@ export function WeekForm(props: PropsType): JSX.Element {
             inputMode="numeric"
             pattern="[1-9][0-9]{3}"
             title="Year YYYY"
+            required
             defaultValue={initialYear}
           />
         </label>
@@ -43,12 +46,13 @@ export function WeekForm(props: PropsType): JSX.Element {
             name="week-number"
             type="text"
             inputMode="numeric"
-            pattern="[0-9]*"
+            pattern="[0-9]*" // TODO: validate with maxWeekNumber
+            required
             defaultValue={initialWeek}
           />
         </label>
       </div>
-      <input type="submit" />
+      <input type="submit" className={style.submit} />
     </form>
   );
 }
