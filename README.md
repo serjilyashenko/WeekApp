@@ -19,5 +19,6 @@ working with dates.
 
 **Notes:**
 
+- A trick to customize date-picker button (see `date-picker.module.css`)
 - I used css custom properties at some point to share calendar content min height (--calendar-content file calendar-template.module.css)
 - As a color schema I use `hsl`. I would like to try `oklch`. But since I prefer to use pure css in that project, the browsers support of `oklch` is not enough today(2023-09-23).
