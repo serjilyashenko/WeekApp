@@ -1,12 +1,24 @@
-.controls_container {
+.wrapper {
+  --header-color: blue;
+}
+
+.header__modificator {
+  background-color: var(--header-color);
+}
+
+.header_controls_container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-size: 20px;
-  color: white;
+  transition: opacity 450ms ease-in-out;
+}
+.wrapper__is_editing .header_controls_container {
+  opacity: 0;
+  pointer-events: none;
 }
 
-.controls_container button {
+.header_controls_container button {
   color: white;
 }
 
@@ -26,24 +38,27 @@
 }
 
 .week_form {
-  background-color: #646cff;
+  background-color: var(--header-color);
+  color: var(--night-text-color);
+  border-radius: 0 0 20px 20px;
   position: absolute;
   inset: 0;
   height: 0;
   transition: height 0.3s ease-in-out;
   transition-delay: 0.15s; /* close delay */
 }
-.week_form__open {
+.wrapper__is_editing .week_form {
   transition-delay: 0s; /* open delay */
   height: 100%;
 }
 
 .week_form_content {
   opacity: 0;
+  padding: 20px;
   transition: opacity 450ms ease-in-out;
   transition-delay: 0s; /* hide delay */
 }
-.week_form__open .week_form_content {
+.wrapper__is_editing .week_form_content {
   transition-delay: 150ms; /* show delay */
   opacity: 1;
 }

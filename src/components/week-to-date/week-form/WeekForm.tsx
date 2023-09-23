@@ -5,23 +5,24 @@ import { getLastIsoWeek } from '../../../utils/getLastIsoWeek';
 type PropsType = {
   initialYear: number;
   initialWeek: number;
+  onSubmit: () => void;
 };
 
 export function WeekForm(props: PropsType): JSX.Element {
-  const { initialYear, initialWeek } = props;
+  const { initialYear, initialWeek, onSubmit } = props;
 
   const firstDayOfYear: Date = new Date(initialYear, 0, 1); // TODO: initialYear should be replaced with year from intput here
   const maxWeekNumber = getIsoWeekNumber(getLastIsoWeek(firstDayOfYear));
 
-  function onSubmit(e: FormEvent<HTMLFormElement>): void {
+  function onSubmitInner(e: FormEvent<HTMLFormElement>): void {
     e.preventDefault();
 
-    // @ts-ignore // TODO: get rid of it
-    setInputWeekNumer(e.target['week-number'].value);
+    // setInputWeekNumer(e.target['week-number'].value);
+    onSubmit();
   }
 
   return (
-    <form onSubmit={onSubmit}>
+    <form onSubmit={onSubmitInner}>
       <div>
         <label>
           Year:
