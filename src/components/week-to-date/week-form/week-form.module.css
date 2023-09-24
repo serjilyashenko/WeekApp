@@ -1,4 +1,13 @@
-.submit {
+.week_form {
+  color: var(--night-text-color);
+}
+
+.week_form input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.week_form input[type='submit'] {
   margin-top: 14px;
   width: 100%;
 }

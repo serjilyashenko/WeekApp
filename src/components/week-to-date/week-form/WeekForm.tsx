@@ -24,7 +24,7 @@ export function WeekForm(props: PropsType): JSX.Element {
   }
 
   return (
-    <form onSubmit={onSubmitInner}>
+    <form className={style.week_form} onSubmit={onSubmitInner}>
       <div>
         <label>
           Year:
@@ -52,7 +52,7 @@ export function WeekForm(props: PropsType): JSX.Element {
           />
         </label>
       </div>
-      <input type="submit" className={style.submit} />
+      <input type="submit" value="Submit" />
     </form>
   );
 }

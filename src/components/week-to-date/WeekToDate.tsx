@@ -40,7 +40,10 @@ export function WeekToDate(): JSX.Element {
       <CalendarTemplate
         headerClassName={style.header__modificator}
         header={
-          <div className={style.header_controls_container}>
+          <div
+            className={style.header_controls_container}
+            aria-hidden={isEditing}
+          >
             <button
               aria-label="refresh date"
               className="icon_btn"
@@ -63,7 +66,7 @@ export function WeekToDate(): JSX.Element {
           <output aria-label="Week days" className={style.dates_output}>
             {resultString}
           </output>
-          <div className={style.week_form}>
+          <div className={style.week_form} aria-hidden={!isEditing}>
             <div className={style.week_form_content}>
               <WeekForm
                 initialYear={year}
