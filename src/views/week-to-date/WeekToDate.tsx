@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CalendarTemplate } from '../../reusable-components/calendar-template/CalendarTemplate';
+import { CalendarTemplate } from '../../components/calendar-template/CalendarTemplate';
 import { getIsoWeekNumber } from '../../utils/getIsoWeekNumber';
 import { getIsoWeekByWeekNumber } from '../../utils/getIsoWeekByWeekNumber';
 import { getEndOfIsoWeek } from '../../utils/getEndOfIsoWeek';

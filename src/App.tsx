@@ -1,5 +1,5 @@
-import { DateToWeek } from './components/date-to-week/DateToWeek';
-import { WeekToDate } from './components/week-to-date/WeekToDate';
+import { DateToWeek } from './views/date-to-week/DateToWeek';
+import { WeekToDate } from './views/week-to-date/WeekToDate';
 import style from './app.module.css';
 
 export default function App(): JSX.Element {

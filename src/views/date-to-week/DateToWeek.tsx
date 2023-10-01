@@ -1,6 +1,6 @@
 import { useId, useState } from 'react';
-import { DatePicker } from '../../reusable-components/date-picker/DatePicker';
-import { CalendarTemplate } from '../../reusable-components/calendar-template/CalendarTemplate';
+import { DatePicker } from '../../components/date-picker/DatePicker';
+import { CalendarTemplate } from '../../components/calendar-template/CalendarTemplate';
 import { getIsoStringDate } from '../../utils/getIsoStringDate';
 import { ReactComponent as RefreshIcon } from '../../icons/refresh.svg';
 import { getIsoWeekNumber } from '../../utils/getIsoWeekNumber';
