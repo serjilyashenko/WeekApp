@@ -25,3 +25,4 @@ working with dates.
 - As a color schema I use `hsl`. I would like to try `oklch`. But since I prefer to use pure css in that project, the browsers support of `oklch` is not enough today(2023-09-23).
 - includes @supports to make `:user-invalid` progressive enhancement for chrome (edge and a bit older chrome doesn't support them (on `2023-09-23`))
 - I like styling of the form for day and night modes. + box-shadow animation for `:focus-visible`
+- There are related fields in WeekForm.tsx. Week input allowed values depends on Year input value. For instance 2023 includes 52 weeks, otherwise 2027 includes 53 weeks. So, the week input's validity may change during Year input change.

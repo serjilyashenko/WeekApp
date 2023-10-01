@@ -1,4 +1,4 @@
-import React, { FormEvent } from 'react';
+import { ChangeEvent, FormEvent, useState } from 'react';
 import { getIsoWeekNumber } from '../../../utils/getIsoWeekNumber';
 import { getLastIsoWeek } from '../../../utils/getLastIsoWeek';
 
@@ -7,20 +7,41 @@ import style from './week-form.module.css';
 type PropsType = {
   initialYear: number;
   initialWeek: number;
-  onSubmit: () => void;
+  onSubmit: (year: number, week: number) => void;
 };
+
+interface WeekFormElements extends HTMLFormElement {
+  year?: HTMLInputElement;
+  week?: HTMLInputElement;
+}
 
 export function WeekForm(props: PropsType): JSX.Element {
   const { initialYear, initialWeek, onSubmit } = props;
 
-  const firstDayOfYear: Date = new Date(initialYear, 0, 1); // TODO: initialYear should be replaced with year from intput here
+  const [year, setYear] = useState(initialYear);
+
+  const firstDayOfYear: Date = new Date(year, 0, 1);
   const maxWeekNumber = getIsoWeekNumber(getLastIsoWeek(firstDayOfYear));
 
-  function onSubmitInner(e: FormEvent<HTMLFormElement>): void {
+  function onSubmitInner(e: FormEvent<WeekFormElements>): void {
     e.preventDefault();
 
-    // setInputWeekNumer(e.target['week-number'].value);
-    onSubmit();
+    const formEl: WeekFormElements = e.currentTarget;
+    const yearEl: HTMLInputElement | undefined = formEl.year;
+    const weekEl: HTMLInputElement | undefined = formEl.week;
+
+    console.log('>>', yearEl?.value, weekEl?.value);
+    // check values and submit
+    // onSubmit();
+  }
+
+  function onYearChange(event: ChangeEvent<HTMLInputElement>) {
+    const yearEl = event.target;
+    const isYearValid = yearEl.checkValidity();
+
+    if (isYearValid) {
+      setYear(Number(yearEl.value));
+    }
   }
 
   return (
@@ -36,17 +57,20 @@ export function WeekForm(props: PropsType): JSX.Element {
             title="Year YYYY"
             required
             defaultValue={initialYear}
+            onChange={onYearChange}
           />
         </label>
       </div>
       <div>
         <label>
-          WeekNumber (1 – {maxWeekNumber}):
+          Week (1 – {maxWeekNumber}):
           <input
-            name="week-number"
+            name="week"
             type="text"
             inputMode="numeric"
-            pattern="[0-9]*" // TODO: validate with maxWeekNumber
+            // TODO: validate with maxWeekNumber
+            // TODO: check if week validation happens if we change a year
+            pattern="[0-9]{1,2}"
             required
             defaultValue={initialWeek}
           />

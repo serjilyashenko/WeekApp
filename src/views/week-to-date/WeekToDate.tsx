@@ -69,6 +69,7 @@ export function WeekToDate(): JSX.Element {
           <div className={style.week_form} aria-hidden={!isEditing}>
             <div className={style.week_form_content}>
               <WeekForm
+                key={`${year}/${week}`}
                 initialYear={year}
                 initialWeek={week}
                 onSubmit={onSubmit}
