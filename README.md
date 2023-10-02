@@ -1,6 +1,6 @@
 # 🗓️ Week App
 
-Simple habit tracker for myself.
+Helps determine the number of the week of the year
 
 #### Stack:
 
