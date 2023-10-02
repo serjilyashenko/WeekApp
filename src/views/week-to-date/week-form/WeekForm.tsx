@@ -1,6 +1,7 @@
 import { ChangeEvent, FormEvent, useState } from 'react';
 import { getIsoWeekNumber } from '../../../utils/getIsoWeekNumber';
 import { getLastIsoWeek } from '../../../utils/getLastIsoWeek';
+import { getMaxWeekRegex } from '../../../utils/getWeekRegex';
 
 import style from './week-form.module.css';
 
@@ -68,9 +69,8 @@ export function WeekForm(props: PropsType): JSX.Element {
             name="week"
             type="text"
             inputMode="numeric"
-            // TODO: validate with maxWeekNumber
-            // TODO: check if week validation happens if we change a year
-            pattern="[0-9]{1,2}"
+            pattern={getMaxWeekRegex(maxWeekNumber)}
+            title={`Week 1-${maxWeekNumber}`}
             required
             defaultValue={initialWeek}
           />
