@@ -1,7 +1,7 @@
 import { ChangeEvent, FormEvent, useState } from 'react';
 import { getIsoWeekNumber } from '../../../utils/getIsoWeekNumber';
 import { getLastIsoWeek } from '../../../utils/getLastIsoWeek';
-import { getMaxWeekRegex } from '../../../utils/getWeekRegex';
+import { getWeekRegexPattern } from '../../../utils/getWeekRegexPattern';
 
 import style from './week-form.module.css';
 
@@ -69,7 +69,7 @@ export function WeekForm(props: PropsType): JSX.Element {
             name="week"
             type="text"
             inputMode="numeric"
-            pattern={getMaxWeekRegex(maxWeekNumber)}
+            pattern={getWeekRegexPattern(maxWeekNumber)}
             title={`Week 1-${maxWeekNumber}`}
             required
             defaultValue={initialWeek}
