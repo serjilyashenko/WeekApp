@@ -31,9 +31,13 @@ export function WeekForm(props: PropsType): JSX.Element {
     const yearEl: HTMLInputElement | undefined = formEl.year;
     const weekEl: HTMLInputElement | undefined = formEl.week;
 
-    console.log('>>', yearEl?.value, weekEl?.value);
-    // check values and submit
-    // onSubmit();
+    if (yearEl?.value && weekEl?.value) {
+      onSubmit(Number(yearEl?.value), Number(weekEl?.value));
+    } else {
+      throw new Error(
+        '>> year or week input values not found. However the validation is passed'
+      );
+    }
   }
 
   function onYearChange(event: ChangeEvent<HTMLInputElement>) {
