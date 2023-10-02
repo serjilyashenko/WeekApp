@@ -28,7 +28,8 @@ export function WeekToDate(): JSX.Element {
   }
 
   function onSubmit(year: number, week: number) {
-    console.log('>> submit:', year, week);
+    setYear(year);
+    setWeek(week);
     setIsEditing(false);
   }
 
