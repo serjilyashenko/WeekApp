@@ -14,8 +14,8 @@ export function WeekToDate(): JSX.Element {
   const [week, setWeek] = useState<number>(getIsoWeekNumber(new Date()));
   const [isEditing, setIsEditing] = useState<boolean>(false);
 
-  const startDate: Date = getIsoWeekByWeekNumber(year, week); // TODO: handle error
-  const endDate: Date = getEndOfIsoWeek(startDate); // TODO: handle error
+  const startDate: Date = getIsoWeekByWeekNumber(year, week); // can throw error. ErrorBoundary catches it
+  const endDate: Date = getEndOfIsoWeek(startDate); // can throw error. ErrorBoundary catches it
 
   const resultString: string = new Intl.DateTimeFormat('default', {
     day: '2-digit',
