@@ -2,7 +2,7 @@
   background-color: hsl(0, 1%, 17%);
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: hsla(0, 0%, 0%, 0.2) 0 20px 30px;
+  box-shadow: var(--shadow);
 }
 
 .calendar_header {

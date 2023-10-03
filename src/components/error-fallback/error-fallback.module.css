@@ -1,0 +1,45 @@
+.window {
+  font-family: courier, monospace;
+  color: hsl(0, 0%, 0%);
+  height: 100%;
+  box-sizing: border-box;
+  border: 2px outset hsl(0, 0%, 0%);
+  background-color: hsl(0, 0%, 75%);
+  box-shadow: var(--shadow);
+  padding: 2px;
+  display: flex;
+  flex-direction: column;
+}
+
+.window_header {
+  background-color: hsl(241, 100%, 32%);
+  color: hsl(0, 0%, 100%);
+  padding: 4px 8px;
+  margin: 0;
+}
+
+.window_content {
+  flex: 1 0;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.cross {
+  background-color: hsl(359, 100%, 44%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: 2px 2px 0 0 hsl(150, 2%, 55%);
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(45deg);
+}
+
+.message {
+  flex: 1 1;
+  text-align: center;
+}

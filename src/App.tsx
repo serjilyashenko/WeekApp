@@ -1,6 +1,7 @@
 import { DateToWeek } from './views/date-to-week/DateToWeek';
 import { WeekToDate } from './views/week-to-date/WeekToDate';
 import { ErrorBoundary } from './components/error-boundary/ErrorBoundary';
+import { ErrorFallback } from './components/error-fallback/ErrorFallback';
 import style from './app.module.css';
 
 export default function App(): JSX.Element {
@@ -16,7 +17,7 @@ export default function App(): JSX.Element {
         <div className={style.main_content__item}>
           <ErrorBoundary
             fallback={(error: Error) => (
-              <div style={{ color: 'red' }}>{error.message}</div> // create error layout
+              <ErrorFallback>{error.message}</ErrorFallback>
             )}
           >
             <WeekToDate />
