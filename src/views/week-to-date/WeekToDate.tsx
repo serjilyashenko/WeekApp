@@ -20,6 +20,7 @@ export function WeekToDate(): JSX.Element {
   const resultString: string = new Intl.DateTimeFormat('default', {
     day: '2-digit',
     month: 'short',
+    year: new Date().getFullYear() !== year ? 'numeric' : undefined,
   }).formatRange(startDate, endDate);
 
   function onRefresh() {
