@@ -15,10 +15,9 @@ While I created my own date functions from scratch for fun, I highly recommend u
 offer a wide range of useful features. By using them, you can avoid common errors and edge cases that may arise when
 working with dates.
 
-**Note:** There is no RTL. First I want to test my date functions. RTL may be added later.
-
 **Notes:**
 
+- There is no RTL. First I want to test my date functions. RTL may be added later.
 - Icons size is calculated as 1.2em from inherited font-size
 - A trick to customize date-picker button (see `date-picker.module.css`)
 - I used css custom properties at some point to share calendar content min height (--calendar-content file calendar-template.module.css)
