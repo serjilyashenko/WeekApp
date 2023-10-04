@@ -35,5 +35,11 @@
   align-items: center;
   justify-content: center;
   gap: 16px;
-  background-color: hsl(0, 0%, 93%);
+  background-color: hsl(0, 0%, 30%);
+}
+
+@media (prefers-color-scheme: light) {
+  .footer {
+    background-color: hsl(0, 0%, 93%);
+  }
 }
