@@ -61,9 +61,6 @@ a:hover {
 
 body {
   margin: 0;
-  display: grid;
-  align-items: center;
-  min-height: 100vh;
 }
 
 h1 {
@@ -101,10 +98,6 @@ button:focus-visible {
 }
 .icon_btn:active {
   transform: scale(1.15);
-}
-
-#root {
-  padding: 32px;
 }
 
 label {
