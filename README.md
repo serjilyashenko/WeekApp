@@ -3,6 +3,12 @@
 Find the week number for any date and vice versa.
 You can also select a year and week number to see the dates within that week
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/serjilyashenko/WeekApp/master/images/preview_dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/serjilyashenko/WeekApp/master/images/preview_light.png">
+  <img alt="Application preview" width="500px" src="https://raw.githubusercontent.com/serjilyashenko/WeekApp/master/images/WinError_light.png">
+</picture>
+
 #### Stack:
 
 - Vite.js
