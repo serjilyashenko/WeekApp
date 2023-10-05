@@ -20,7 +20,7 @@ For example, in the year 2023, the 40th ISO week runs from Monday, October 2nd t
 - Jest
 - ts-jest
 
-**Notes:**
+#### Notes:
 
 - While I created my own date functions from scratch for fun, I highly recommend using third-party libraries such as
   `date-fns` or `luxon` for production code. These libraries have been thoroughly tested, optimized for performance, and
