@@ -14,6 +14,18 @@
 
 .header {
   text-align: center;
+  margin-bottom: 32px;
+}
+
+.warning_wrapper {
+  display: flex;
+  justify-content: center;
+}
+.warning {
+  max-width: 600px;
+  text-align: center;
+  font-size: 20px;
+  text-wrap: balance; /* chrome and edge only (2023-10-05) */
 }
 
 .main_content {

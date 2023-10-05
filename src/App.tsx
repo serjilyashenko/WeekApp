@@ -11,6 +11,26 @@ export default function App(): JSX.Element {
       <div className={style.content_wrapper}>
         <header className={style.header}>
           <h1>🗓️ Week App</h1>
+          <div className={style.warning_wrapper}>
+            <details className={style.warning}>
+              <summary>
+                ⚠️ exclusively operates with ISO weeks (
+                <a
+                  href="https://en.wikipedia.org/wiki/ISO_week_date"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  wiki
+                </a>
+                ).
+              </summary>
+              <p>
+                ISO weeks start from Monday. For example, in the year 2023, the
+                40th ISO week runs from Monday, October 2nd to Sunday, October
+                8th.
+              </p>
+            </details>
+          </div>
         </header>
         <main className={style.main_content}>
           <div className={style.main_content__item}>
