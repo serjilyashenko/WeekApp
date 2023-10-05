@@ -1,5 +1,7 @@
 # 🗓️ Week App
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/162a4db8-f908-4a07-bdb5-be8e88d5cb47/deploy-status)](https://app.netlify.com/sites/weekapp/deploys)
+
 Find the week number for any date and vice versa.
 You can also select a year and week number to see the dates within that week
 
