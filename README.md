@@ -48,7 +48,12 @@ For example, in the year 2023, the 40th ISO week runs from Monday, October 2nd t
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/serjilyashenko/WeekApp/master/images/WinError_dark.png">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/serjilyashenko/WeekApp/master/images/WinError_light.png">
-  <img alt="Shows error example" width="500px" height="286px" src="https://raw.githubusercontent.com/serjilyashenko/WeekApp/master/images/WinError_light.png">
+  <img alt="Shows error example" width="500px" height="286px" src="https://raw.githubusercontent.com/serjilyashenko/WeekApp/master/images/WinError_light.png"/>
 </picture>
 
 - ISO warning text includes `text-wrap: balance;`. However, chrome and edge only supports this (2023-10-05).
+- The favicon setup is based on the [evilmartians article](https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs)
+  - `<link rel="icon" href="/favicon.ico" sizes="32x32" />` for legacy browsers
+  - `<link rel="icon" href="/icon.svg" type="image/svg+xml" />` Single SVG icon for modern browsers (a light/dark version can be included)
+  - `<link rel="apple-touch-icon" href="/apple-touch-icon.png" />` 180×180 PNG image for Apple devices
+  - `<link rel="manifest" href="/manifest.webmanifest" />` Web app manifest with 192×192 and 512×512 PNG icons for Android devices
