@@ -6,8 +6,11 @@ You can also select a year and week number to see the dates within that week
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/serjilyashenko/WeekApp/master/images/preview_dark.png">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/serjilyashenko/WeekApp/master/images/preview_light.png">
-  <img alt="Application preview" width="500px" src="https://raw.githubusercontent.com/serjilyashenko/WeekApp/master/images/WinError_light.png">
+  <img alt="Application preview" width="500px" height="400px" src="https://raw.githubusercontent.com/serjilyashenko/WeekApp/master/images/WinError_light.png">
 </picture>
+
+⚠️ WeekApp exclusively operates with ISO weeks. That means weeks start from Monday. ⚠️<br/>
+For example, in the year 2023, the 40th ISO week runs from Monday, October 2nd to Sunday, October 8th.
 
 #### Stack:
 
@@ -35,7 +38,7 @@ working with dates.
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/serjilyashenko/WeekApp/master/images/formAnimation_dark.gif">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/serjilyashenko/WeekApp/master/images/formAnimation_light.gif">
-  <img alt="Form animation" width="300px" src="https://raw.githubusercontent.com/serjilyashenko/WeekApp/master/images/WinError_light.png">
+  <img alt="Form animation" width="300px" height="290px" src="https://raw.githubusercontent.com/serjilyashenko/WeekApp/master/images/WinError_light.png">
 </picture>
 
 - There are related fields in WeekForm.tsx. Week input allowed values depends on Year input value. For instance 2023 includes 52 weeks, otherwise 2027 includes 53 weeks. So, the week input's validity may change during Year input change.
@@ -46,5 +49,5 @@ working with dates.
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/serjilyashenko/WeekApp/master/images/WinError_dark.png">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/serjilyashenko/WeekApp/master/images/WinError_light.png">
-  <img alt="Shows error example" width="500px" src="https://raw.githubusercontent.com/serjilyashenko/WeekApp/master/images/WinError_light.png">
+  <img alt="Shows error example" width="500px" height="286px" src="https://raw.githubusercontent.com/serjilyashenko/WeekApp/master/images/WinError_light.png">
 </picture>
