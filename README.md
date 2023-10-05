@@ -1,6 +1,7 @@
 # 🗓️ Week App
 
-Helps determine the number of the week of the year
+Find the week number for any date and vice versa.
+You can also select a year and week number to see the dates within that week
 
 #### Stack:
 
