@@ -9,7 +9,7 @@ You can also select a year and week number to see the dates within that week
   <img alt="Application preview" width="500px" height="400px" src="https://raw.githubusercontent.com/serjilyashenko/WeekApp/master/images/WinError_light.png">
 </picture>
 
-⚠️ WeekApp exclusively operates with ISO weeks. That means weeks start from Monday. ⚠️<br/>
+⚠️ WeekApp exclusively operates with ISO weeks ([wiki](https://en.wikipedia.org/wiki/ISO_week_date)). That means weeks start from Monday. ⚠️<br/>
 For example, in the year 2023, the 40th ISO week runs from Monday, October 2nd to Sunday, October 8th.
 
 #### Stack:
