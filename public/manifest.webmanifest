@@ -1,4 +1,3 @@
-// manifest.webmanifest
 {
   "short_name": "week app",
   "start_url": "https://weekapp.netlify.app/",
