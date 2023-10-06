@@ -59,7 +59,11 @@ export function WeekToDate(): JSX.Element {
             <time>
               {year} w{week}
             </time>
-            <button className="icon_btn" onClick={() => setIsEditing(true)}>
+            <button
+              className="icon_btn"
+              aria-label="edit week"
+              onClick={() => setIsEditing(true)}
+            >
               <EditIcon aria-hidden />
             </button>
           </div>

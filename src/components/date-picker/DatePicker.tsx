@@ -17,7 +17,7 @@ export function DatePicker(props: PropsType): JSX.Element {
   }
 
   return (
-    <button className={`icon_btn ${style.datepicker}`}>
+    <button className={`icon_btn ${style.datepicker}`} aria-label="edit date">
       <EditIcon aria-hidden />
       <input
         type="date"
