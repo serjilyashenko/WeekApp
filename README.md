@@ -61,3 +61,4 @@ For example, in the year 2023, the 40th ISO week runs from Monday, October 2nd t
   - `<link rel="icon" href="/icon.svg" type="image/svg+xml" />` Single SVG icon for modern browsers (a light/dark version can be included)
   - `<link rel="apple-touch-icon" href="/apple-touch-icon.png" />` 180×180 PNG image for Apple devices
   - `<link rel="manifest" href="/manifest.webmanifest" />` Web app manifest with 192×192 and 512×512 PNG icons for Android devices
+- Also Preview is added via OpenGraph metatags
