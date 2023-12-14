@@ -13,14 +13,16 @@ it.each([
   ['2024', '2024-01-01'],
   ['2025', '2024-12-30'],
 ])('start of %o year is %o', (year, result) => {
-  const fifthJanuary = getFirstIsoWeek(new Date(`${year}-03-12T14:00:00Z`));
+  const firstIsoWeek = getFirstIsoWeek(new Date(`${year}-03-12T14:00:00Z`));
 
-  expect(fifthJanuary.toLocaleDateString('en-SE')).toBe(result);
+  expect(firstIsoWeek.toLocaleDateString('en-SE')).toBe(result);
 });
 
 it.each([
-  ['2023-01-01T00:00:00', '2022-01-03'],
   ['2022-12-31T00:00:00', '2022-01-03'],
+  ['2023-01-01T00:00:00', '2022-01-03'],
+  ['2023-12-31T00:00:00', '2023-01-02'],
+  ['2024-01-01T00:00:00', '2024-01-01'],
   ['2024-12-31T00:00:00', '2024-12-30'],
 ])('edge cases: %o => %o', (input, output) => {
   const date = new Date(input);

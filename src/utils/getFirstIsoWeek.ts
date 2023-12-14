@@ -13,7 +13,7 @@ export function getFirstIsoWeek(dirtyDate: Date): Date {
   nextFifthJanuary.setMonth(0);
   const nextYear = getIsoWeek(nextFifthJanuary);
 
-  if (date.getTime() > nextYear.getTime()) {
+  if (date.getTime() >= nextYear.getTime()) {
     return nextYear;
   }
 
@@ -23,7 +23,7 @@ export function getFirstIsoWeek(dirtyDate: Date): Date {
   fifthJanuary.setMonth(0);
   const thisYear = getIsoWeek(fifthJanuary);
 
-  if (date.getTime() > fifthJanuary.getTime()) {
+  if (date.getTime() >= thisYear.getTime()) {
     return thisYear;
   }
 
